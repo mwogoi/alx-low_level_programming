@@ -1,22 +1,19 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: Print all possible combination of single digit numbers using putchar
  * Return: Always 0
  */
 int main(void)
 {
-	int i = 0;
+	int i;
 
-	while (i < 10)
+	for (i = 0; i <= 9; i++)
 	{
-		putchar(i + '0');
-		if (i <= 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-		i++;
+		putchar((num % 10) + '0');
+		if (i == 9)
+			continue;
+		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
