@@ -8,13 +8,13 @@ int main(void)
 {
 	int numb;
 
-	for (a = 0; a < 10; a++)
+	for (numb = 0; numb < 10; numb++)
 	{
-		putchar(a + '0');
+		putchar(numb + '0');
 	}
-	for (a = 'a'; a <= 'f'; a++)
+	for (numb = 'numb'; numb <= 'f'; numb++)
 	{
-		putchar(a);
+		putchar(numb);
 	}
 	putchat('\n');
 	return (0);
