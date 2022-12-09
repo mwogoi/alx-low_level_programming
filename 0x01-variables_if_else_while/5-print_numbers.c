@@ -8,9 +8,9 @@ int main(void)
 {
 	int numb;
 
-	for (a = 0; a < 10; a++)
+	for (numb = 0; numb < 10; numb++)
 	{
-		printf("%i", a);
+		printf("%i", numb);
 	}
 	putchar('\n');
 	return (0);
