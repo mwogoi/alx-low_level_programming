@@ -6,7 +6,7 @@
 int main(void)
 {
 	int counter;
-	long numb1, numb2, sum;
+	long int numb1, numb2, sum;
 
 	numb1 = 0;
 	numb2 = 1;
