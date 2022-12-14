@@ -13,7 +13,7 @@ int main(void)
 		if (((number % 3) != 0) || ((number % 5) != 0))
 			continue;
 		else
-			printf("The number is %d ", number);
+			printf("%d,", number);
 	}
 	_putchar('\n');
 
