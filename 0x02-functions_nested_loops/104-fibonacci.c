@@ -17,7 +17,7 @@ int main(void)
 		printf("%lu", sum);
 		numb1 = numb2;
 		numb2 = sum;
-		if (counter != 97)
+		if (counter < 97)
 			printf(", ");
 		else
 			printf("\n");
