@@ -16,8 +16,8 @@ int main(void)
 		numb3 = numb1 + numb2;
 		numb1 = numb2;
 		numb2 = numb3;
-		if ((k < 4000000) && (k % 2 == 0))
-			sum = sum + k;
+		if ((numb3 < 4000000) && (numb3 % 2 == 0))
+			sum = sum + numb3;
 	}
 	printf("%lu\n", sum);
 	return (0);
