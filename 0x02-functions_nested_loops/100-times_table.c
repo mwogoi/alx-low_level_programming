@@ -10,11 +10,11 @@ void print_times_table(int n)
 
 	if (n >= 0 && n <= 15)
 	{
-		for (roww = 0; roww < n; roww++)
+		for (roww = 0; roww <= n; roww++)
 		{
 			_putchar('0');
 
-			for (columnn = 1; columnn < n; columnn++)
+			for (columnn = 1; columnn <= n; columnn++)
 			{
 				_putchar(',');
 				_putchar(' ');
