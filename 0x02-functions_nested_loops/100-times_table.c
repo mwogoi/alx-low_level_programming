@@ -12,22 +12,28 @@ void print_times_table(int n)
 		continue;
 	else
 	{
-		for (roww = 0; roww < 15; roww++)
+		for (roww = 0; roww < n; roww++)
 		{
 			_putchar('0');
 
-			for (columnn = 1; columnn < 15; columnn++)
+			for (columnn = 1; columnn < n; columnn++)
 			{
 				_putchar(',');
 				_putchar(' ');
 
 				productt = roww * columnn;
 
-				if (productt < n)
+				if (productt <= 99)
 					_putchar(' ');
-				else
+				if (productt <= 9)
+					_putchar(' ');
+				if (product >= 100)
+				{
 					_putchar((productt / 100) + '0');
-				_putchar((productt / 10) + '0');
+					_putchar((productt % 100) + '0');
+				}
+				else if (productt <= 100 && productt >= 10)
+					_putchar((productt / 10) + '0');
 				_putchar((productt % 10) + '0');
 			}
 			_putchar('\n');
