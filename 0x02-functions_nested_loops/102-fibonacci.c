@@ -16,10 +16,9 @@ int main(void)
 		printf("%lu", sum);
 		numb1 = numb2;
 		numb2 = sum;
-		if (sum == 49)
+		printf(", ");
+		while (sum == 49)
 			printf("\n");
-		else
-			printf(", ");
 	}
 	return (0);
 }
