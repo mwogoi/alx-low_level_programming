@@ -16,8 +16,9 @@ int main(void)
 		printf("%lu", sum);
 		numb1 = numb2;
 		numb2 = sum;
-		printf(", ");
-		while (sum == 49)
+		if (sum < 49)
+			printf(", ");
+		else
 			printf("\n");
 	}
 	return (0);
