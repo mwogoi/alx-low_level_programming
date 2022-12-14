@@ -6,16 +6,19 @@
  */
 int main(void)
 {
-	int number;
+	int number, sum;
 
+	sum = 0;
 	for (number = 0; number <= 1024; number++)
 	{
 		if (((number % 3) != 0) || ((number % 5) != 0))
 			continue;
 		else
-			printf("%d,", number);
+		{
+			sum += number;
+		}
 	}
+	printf("%d,", sum);
 	_putchar('\n');
-
 	return (0);
 }
