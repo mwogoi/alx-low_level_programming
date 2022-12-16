@@ -6,21 +6,22 @@
  */
 int main(void)
 {
-	int i;
+	int numb;
 
-	for (i = 1; i <= 100; i++)
+	for (numb = 1; numb <= 100; numb++)
 	{
-		if (!(i % 15))
+		if (numb % 3 == 0 && numb % 5 == 0)
 			printf("FizzBuzz");
-		else if (!(i % 3))
+		else if (numb % 3 == 0 && numb % 5 != 0)
 			printf("Fizz");
-		else if (!(i % 5))
+		else if (numb % 3 != 0 && numb % 5 == 0)
 			printf("Buzz");
+		else if (numb == 1)
+			printf("%d", numb);
 		else
-			printf("%d", i);
-		if (i != 100)
-			_putchar(' ');
+			printf("%d", numb);
 	}
-	printf('\n');
+	printf("\n");
 	return (0);
 }
+
