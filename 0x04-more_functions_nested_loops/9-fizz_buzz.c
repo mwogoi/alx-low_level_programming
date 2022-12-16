@@ -17,7 +17,7 @@ int main(void)
 		else if (!(i % 5))
 			printf("Buzz");
 		else
-			print_number_simple(i);
+			printf("%d", i);
 		if (i != 100)
 			_putchar(' ');
 	}
