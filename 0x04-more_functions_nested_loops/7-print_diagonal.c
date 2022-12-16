@@ -16,5 +16,5 @@ void print_diagonal(int n)
 		if (count1 < (n - 1))
 			_putchar('\n');
 	}
-	_puchar('\n');
+	_putchar('\n');
 }
