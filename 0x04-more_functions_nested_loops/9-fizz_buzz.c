@@ -23,7 +23,6 @@ int main(void)
 		else
 			printf("%d ", numb);
 	}
-	printf("\n");
 	return (0);
 }
 
