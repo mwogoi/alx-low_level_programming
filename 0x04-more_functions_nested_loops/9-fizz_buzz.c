@@ -18,6 +18,8 @@ int main(void)
 			printf("Buzz ");
 		else if (numb == 1)
 			printf("%d ", numb);
+		else if (numb == 100)
+			printf("%d\n", numb);
 		else
 			printf("%d ", numb);
 	}
