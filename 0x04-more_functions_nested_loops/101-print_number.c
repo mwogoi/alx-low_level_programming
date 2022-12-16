@@ -19,7 +19,7 @@ void print_number(int n)
 	c = 1;
 	while (b > 9)
 	{
-		d /= 10;
+		b /= 10;
 		c *= 10;
 	}
 	for (; c >= 1; c /= 10)
