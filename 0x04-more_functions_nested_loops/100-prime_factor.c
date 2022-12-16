@@ -12,7 +12,7 @@ int main(void)
 	{
 		if (numb % prime == 0)
 		{
-			n /= prime;
+			numb /= prime;
 			prime--;
 		}
 	}
