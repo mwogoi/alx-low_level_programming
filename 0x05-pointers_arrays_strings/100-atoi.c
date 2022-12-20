@@ -19,17 +19,22 @@ int _isdigit(int c)
 int _atoi(char *s)
 {
 	int returnn, sign, start;
+
 	start = 0;
 	for (returnn = 0, sign = 1; (*s != '\0'); s++)
 	{
 		if (_isdigit(*s))
 		{
 			start = 1;
-			returnn *= 10;
+			returnn = returnn * 10;
 			if (sign == 1)
-				returnn += ((*s) - '0');
+			{
+				returnn = returnn + ((*s) - '0');
+			}
 			else
-				returnn -= ((*s) - '0');
+			{
+				returnn = returnn - ((*s) - '0');
+			}
 		}
 		else if (start)
 		{
