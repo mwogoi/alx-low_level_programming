@@ -7,10 +7,9 @@
 char *rot13(char *string)
 {
 	int count1, count2;
-	char s1[], s2[];
+	char s1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char s2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	s1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	s2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	for (count1 = 0; string[count1] != '\0'; count1++)
 	{
 		for (count2 = 0; count2 <= 51; count2++)
