@@ -1,43 +1,58 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_buffer - print the buffer storage
- * @b: the buffer pointer
- * @size: The size of the buffer
- * Return: Void
- */
+ *  * print_line - prints a s bytes of a buffer
+ *   * @c: buffer to print
+ *    * @s: bytes of buffer to print
+ *     * @l: line of buffer to print
+ *      *
+ *       * Return: void
+ *        */
+
+void print_line(char *c, int s, int l)
+{
+	int j, k;
+	for (j = 0; j <= 9; j++)
+	{
+		if (j <= s)
+			printf("%02x", c[l * 10 + j]);
+		else
+			printf("  ");
+		if (j % 2)
+			putchar(' ');
+	}
+	for (k = 0; k <= s; k++)
+	{
+		if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
+			putchar(c[l * 10 + k]);
+		else
+			putchar('.');
+	}
+}
+
+/**
+ *  * print_buffer - prints a buffer
+ *   * @b: buffer to print
+ *    * @size: size of buffer
+ *     *
+ *      * Return: void
+ *       */
 void print_buffer(char *b, int size)
 {
-	int numb, count1, count2;
-
-	numb = 0;
-	if (size <= 0)
+	int i;
+i	for (i = 0; i <= (size - 1) / 10 && size; i++)
 	{
-		printf("\n");
-		return;
-	}
-	while (numb < size)
-	{
-		count2 = size - numb < 10 ? size - numb : 10;
-		printf("%08x:", numb);
-		for (count1; count1 < 10; count1++)
+		printf("%08x: ", i * 10);
+		if (i < size / 10)
 		{
-			if (count1 < count2)
-				printf("%02x", *(b + numb + count1));
-			else
-				printf(" ");
-			if (count1 % 2)
-				printf(" ");
+			print_line(b, 9, i);
 		}
-		for (count1 = 0; count1 < count2; count1++)
+		else
 		{
-			int c = *(b + numb + count1);
-
-			if (c < 32 || c > 132)
-				c = '.';
-			printf("%c", c);
+			print_line(b, size % 10 - 1, i);
 		}
-		printf("\n");
-		numb += 10;
+		putchar('\n');
 	}
+	if (size == 0)
+		putchar('\n');
 }
