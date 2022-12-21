@@ -4,7 +4,7 @@
  * @string: The  string to be encoded
  * Return: The encoded string
  */
-char *leet(char *string);
+char *leet(char *string)
 {
 	int count1, count2;
 	char s1[] = "aAeEoOtTlL";
